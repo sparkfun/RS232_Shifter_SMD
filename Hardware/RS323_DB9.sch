@@ -17546,7 +17546,7 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <part name="R1" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
 <part name="P+5" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M04" device="LOCK"/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M04" device="PTH"/>
 <part name="E$1" library="SparkFun" deviceset="FIDUCIAL" device="1X2"/>
 <part name="E$2" library="SparkFun" deviceset="FIDUCIAL" device="1X2"/>
 <part name="U2" library="SparkFun" deviceset="XN04312" device="SOT" value="XN04312"/>
