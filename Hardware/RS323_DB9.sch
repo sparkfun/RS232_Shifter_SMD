@@ -994,6 +994,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-20.32" y="5.08" size="1.778" layer="51">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
 <text x="0" y="2.54" size="1.778" layer="51"> https://creativecommons.org/licenses/by-sa/4.0/</text>
 <text x="11.43" y="0" size="1.778" layer="51">Designed by:</text>
+<text x="29.21" y="10.16" size="1.27" layer="16" font="vector" ratio="15" rot="SMR0">&gt;VERSION</text>
+<text x="26.67" y="0" size="1.778" layer="51">&gt;DESIGNER</text>
 </package>
 <package name="OSHW-LOGO-S">
 <polygon width="0.15" layer="21">
@@ -11976,6 +11978,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="80.38" y="46.92"/>
 </polygon>
 </package>
+<package name="DUMMY">
+<description>NOTHING HERE!!! For when you want a symbol with no package as an option against symbols with a package.</description>
+</package>
 </packages>
 <symbols>
 <symbol name="LETTER_L">
@@ -12015,6 +12020,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="2.54" y="27.94" size="1.9304" layer="94">Attribution Share-Alike 4.0 License</text>
 <text x="2.54" y="24.13" size="1.9304" layer="94"> https://creativecommons.org/licenses/by-sa/4.0/</text>
 <text x="1.27" y="11.43" size="2.54" layer="94">Design by:</text>
+<text x="23.368" y="11.43" size="2.54" layer="94">&gt;DESIGNER</text>
+<text x="88.9" y="6.604" size="2.54" layer="94" font="vector">&gt;VERSION</text>
 </symbol>
 <symbol name="OSHW-LOGO">
 <rectangle x1="-9.5059" y1="-9.0106" x2="-9.4043" y2="-8.9979" layer="94"/>
@@ -16640,17 +16647,28 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="FRAME-LETTER" prefix="FRAME">
+<deviceset name="FRAME-LETTER" prefix="FRAME" uservalue="yes">
 <description>&lt;b&gt;Schematic Frame&lt;/b&gt;&lt;p&gt;
 Standard 8.5x11 US Letter frame</description>
 <gates>
 <gate name="G$1" symbol="LETTER_L" x="0" y="0"/>
-<gate name="G$2" symbol="DOCFIELD" x="147.32" y="0" addlevel="must"/>
+<gate name="V" symbol="DOCFIELD" x="147.32" y="0" addlevel="must"/>
 </gates>
 <devices>
 <device name="" package="CREATIVE_COMMONS">
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESIGNER" value="NAME" constant="no"/>
+<attribute name="VERSION" value="v01" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="NO_PACKAGE" package="DUMMY">
+<technologies>
+<technology name="">
+<attribute name="DESIGNER" value="Nobody" constant="no"/>
+<attribute name="VERSION" value="v01" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -17532,8 +17550,8 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <parts>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="DB9" device="FEMALE" value="DB9"/>
-<part name="LED1" library="SparkFun" deviceset="LED" device="1206" value="Red"/>
-<part name="LED3" library="SparkFun" deviceset="LED" device="1206" value="Grn"/>
+<part name="D4" library="SparkFun" deviceset="LED" device="1206" value="Red"/>
+<part name="D5" library="SparkFun" deviceset="LED" device="1206" value="Grn"/>
 <part name="D1" library="SparkFun" deviceset="DIODE" device="SOD" value="BAS16"/>
 <part name="C4" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
@@ -17552,58 +17570,84 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <part name="U2" library="SparkFun" deviceset="XN04312" device="SOT" value="XN04312"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="M"/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH" value="SFE_LOGO_NAME_FLAME.1_INCH"/>
+<part name="GND2" library="SparkFun" deviceset="GND" device=""/>
+<part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="239.776" y="7.112" size="2.54" layer="94">V15</text>
 <text x="148.59" y="7.366" size="2.54" layer="94">Revised by: Patrick Alberts</text>
+<text x="165.608" y="11.176" size="2.54" layer="94">N. Seidle</text>
+<wire x1="0" y1="142.24" x2="53.34" y2="142.24" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="53.34" y1="142.24" x2="53.34" y2="91.44" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="53.34" y1="91.44" x2="0" y2="91.44" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="0" y1="91.44" x2="0" y2="88.9" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="53.34" y1="142.24" x2="101.6" y2="142.24" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="101.6" y1="142.24" x2="101.6" y2="91.44" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="101.6" y1="91.44" x2="53.34" y2="91.44" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="101.6" y1="142.24" x2="101.6" y2="160.02" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="101.6" y1="160.02" x2="180.34" y2="160.02" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="160.02" x2="180.34" y2="129.54" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="129.54" x2="180.34" y2="81.28" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="81.28" x2="180.34" y2="58.42" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="58.42" x2="101.6" y2="58.42" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="101.6" y1="58.42" x2="101.6" y2="91.44" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="129.54" x2="236.22" y2="129.54" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="236.22" y1="129.54" x2="236.22" y2="81.28" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="236.22" y1="81.28" x2="180.34" y2="81.28" width="0.2032" layer="97" style="shortdash"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
+<instance part="FRAME1" gate="V" x="147.32" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="160.02" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="233.68" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="162.814" y="17.78" size="2.7432" layer="94" font="vector"/>
+</instance>
 <instance part="JP1" gate="G$1" x="71.12" y="109.22" rot="MR0"/>
-<instance part="LED1" gate="G$1" x="50.8" y="60.96"/>
-<instance part="LED3" gate="G$1" x="60.96" y="60.96"/>
-<instance part="D1" gate="G$1" x="134.62" y="86.36" smashed="yes" rot="R180">
-<attribute name="NAME" x="132.334" y="89.1286" size="1.778" layer="95"/>
-<attribute name="VALUE" x="129.794" y="82.5246" size="1.778" layer="96"/>
+<instance part="D4" gate="G$1" x="20.32" y="106.68"/>
+<instance part="D5" gate="G$1" x="30.48" y="106.68"/>
+<instance part="D1" gate="G$1" x="139.7" y="86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="137.414" y="89.1286" size="1.778" layer="95"/>
+<attribute name="VALUE" x="134.874" y="82.5246" size="1.778" layer="96"/>
 </instance>
-<instance part="C4" gate="G$1" x="139.7" y="78.74" smashed="yes" rot="R180">
-<attribute name="NAME" x="138.684" y="78.105" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="138.684" y="75.311" size="1.778" layer="96" rot="R180"/>
+<instance part="C4" gate="G$1" x="144.78" y="78.74" smashed="yes" rot="R180">
+<attribute name="NAME" x="143.764" y="78.105" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="143.764" y="72.771" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R3" gate="G$1" x="50.8" y="71.12" rot="R90"/>
-<instance part="R4" gate="G$1" x="60.96" y="71.12" rot="R90"/>
-<instance part="P+1" gate="1" x="50.8" y="78.74"/>
-<instance part="P+2" gate="1" x="60.96" y="78.74"/>
-<instance part="R2" gate="G$1" x="139.7" y="93.98" rot="R90"/>
-<instance part="GND7" gate="1" x="149.86" y="99.06"/>
-<instance part="GND8" gate="1" x="139.7" y="71.12"/>
-<instance part="R1" gate="G$1" x="149.86" y="134.62" rot="R90"/>
-<instance part="P+5" gate="1" x="139.7" y="144.78"/>
+<instance part="R3" gate="G$1" x="20.32" y="116.84" rot="R90"/>
+<instance part="R4" gate="G$1" x="30.48" y="116.84" rot="R90"/>
+<instance part="P+1" gate="1" x="20.32" y="124.46"/>
+<instance part="P+2" gate="1" x="30.48" y="124.46"/>
+<instance part="R2" gate="G$1" x="144.78" y="93.98" rot="R90"/>
+<instance part="GND7" gate="1" x="154.94" y="99.06"/>
+<instance part="GND8" gate="1" x="144.78" y="68.58"/>
+<instance part="R1" gate="G$1" x="154.94" y="134.62" rot="R90"/>
+<instance part="P+5" gate="1" x="144.78" y="144.78"/>
 <instance part="GND1" gate="1" x="81.28" y="99.06"/>
-<instance part="JP2" gate="G$1" x="203.2" y="96.52" rot="R180"/>
+<instance part="JP2" gate="G$1" x="210.82" y="109.22" rot="R180"/>
 <instance part="E$1" gate="G$1" x="246.38" y="25.4"/>
 <instance part="E$2" gate="G$1" x="241.3" y="25.4"/>
-<instance part="U2" gate="G$1" x="144.78" y="114.3" smashed="yes" rot="MR270">
-<attribute name="NAME" x="135.89" y="105.918" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="151.13" y="106.172" size="1.778" layer="96" rot="MR180"/>
+<instance part="U2" gate="G$1" x="149.86" y="114.3" smashed="yes" rot="MR270">
+<attribute name="NAME" x="140.97" y="105.918" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="156.21" y="106.172" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="LOGO2" gate="G$1" x="167.64" y="48.26"/>
 <instance part="LOGO1" gate="G$1" x="185.42" y="38.1"/>
+<instance part="GND2" gate="1" x="203.2" y="96.52"/>
+<instance part="P+3" gate="1" x="203.2" y="116.84"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<wire x1="149.86" y1="101.6" x2="149.86" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="101.6" x2="154.94" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <pinref part="U2" gate="G$1" pin="E1"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="73.66" x2="139.7" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="71.12" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="+"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
@@ -17614,98 +17658,100 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="198.12" y1="96.52" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="109.22" x2="203.2" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="109.22" x2="203.2" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="2"/>
-<label x="195.58" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<wire x1="50.8" y1="76.2" x2="50.8" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="121.92" x2="20.32" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="P+1" gate="1" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="60.96" y1="76.2" x2="60.96" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="121.92" x2="30.48" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="P+2" gate="1" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="149.86" y1="139.7" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="142.24" x2="139.7" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="142.24" x2="139.7" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="142.24" x2="139.7" y2="124.46" width="0.1524" layer="91"/>
-<junction x="139.7" y="142.24"/>
+<wire x1="154.94" y1="139.7" x2="154.94" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="142.24" x2="144.78" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="142.24" x2="144.78" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="142.24" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
+<junction x="144.78" y="142.24"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="P+5" gate="1" pin="VCC"/>
 <pinref part="U2" gate="G$1" pin="E2"/>
 </segment>
 <segment>
-<wire x1="198.12" y1="99.06" x2="195.58" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="111.76" x2="203.2" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="111.76" x2="203.2" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
-<label x="195.58" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="P+3" gate="1" pin="VCC"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<wire x1="50.8" y1="63.5" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="20.32" y1="109.22" x2="20.32" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="D4" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<wire x1="60.96" y1="63.5" x2="60.96" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
+<wire x1="30.48" y1="109.22" x2="30.48" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="D5" gate="G$1" pin="A"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="RX" class="0">
 <segment>
-<wire x1="50.8" y1="55.88" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="53.34" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<label x="45.72" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="20.32" y1="101.6" x2="20.32" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="99.06" x2="15.24" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="D4" gate="G$1" pin="C"/>
+<label x="15.24" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="124.46" x2="144.78" y2="127" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="124.46" x2="149.86" y2="127" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="B2"/>
-<label x="144.78" y="127" size="1.27" layer="95" rot="R90" xref="yes"/>
+<label x="149.86" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="195.58" y1="91.44" x2="198.12" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="104.14" x2="205.74" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="4"/>
-<label x="195.58" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="200.66" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="TX" class="0">
 <segment>
-<wire x1="60.96" y1="55.88" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="53.34" x2="66.04" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="LED3" gate="G$1" pin="C"/>
-<label x="66.04" y="53.34" size="1.27" layer="95" xref="yes"/>
+<wire x1="30.48" y1="101.6" x2="30.48" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="99.06" x2="35.56" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="D5" gate="G$1" pin="C"/>
+<label x="35.56" y="99.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="149.86" y1="129.54" x2="149.86" y2="127" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="127" x2="149.86" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="127" x2="152.4" y2="127" width="0.1524" layer="91"/>
-<junction x="149.86" y="127"/>
+<wire x1="154.94" y1="129.54" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="127" x2="154.94" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="127" x2="157.48" y2="127" width="0.1524" layer="91"/>
+<junction x="154.94" y="127"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="U2" gate="G$1" pin="C1"/>
-<label x="152.4" y="127" size="1.27" layer="95" xref="yes"/>
+<label x="157.48" y="127" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="195.58" y1="93.98" x2="198.12" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="106.68" x2="205.74" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="3"/>
-<label x="195.58" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="200.66" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<wire x1="139.7" y1="83.82" x2="139.7" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="86.36" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="86.36" x2="139.7" y2="86.36" width="0.1524" layer="91"/>
-<junction x="139.7" y="86.36"/>
+<wire x1="144.78" y1="83.82" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="86.36" x2="144.78" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="86.36" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
+<junction x="144.78" y="86.36"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="C4" gate="G$1" pin="-"/>
 <pinref part="D1" gate="G$1" pin="A"/>
@@ -17713,13 +17759,13 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 </net>
 <net name="RS-OUT" class="0">
 <segment>
-<wire x1="139.7" y1="99.06" x2="139.7" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="101.6" x2="139.7" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="101.6" x2="124.46" y2="101.6" width="0.1524" layer="91"/>
-<junction x="139.7" y="101.6"/>
+<wire x1="144.78" y1="99.06" x2="144.78" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="101.6" x2="144.78" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="101.6" x2="142.24" y2="101.6" width="0.1524" layer="91"/>
+<junction x="144.78" y="101.6"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="U2" gate="G$1" pin="C2"/>
-<label x="124.46" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="142.24" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="78.74" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
@@ -17729,15 +17775,15 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 </net>
 <net name="RS-IN" class="0">
 <segment>
-<wire x1="132.08" y1="86.36" x2="127" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="104.14" x2="144.78" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="66.04" x2="127" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="127" y1="66.04" x2="127" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="127" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
-<junction x="127" y="86.36"/>
+<wire x1="137.16" y1="86.36" x2="132.08" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="104.14" x2="149.86" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="63.5" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="63.5" x2="132.08" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="86.36" x2="129.54" y2="86.36" width="0.1524" layer="91"/>
+<junction x="132.08" y="86.36"/>
 <pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="U2" gate="G$1" pin="B1"/>
-<label x="124.46" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="129.54" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="78.74" y1="109.22" x2="81.28" y2="109.22" width="0.1524" layer="91"/>
