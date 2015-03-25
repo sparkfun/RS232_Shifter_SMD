@@ -1803,9 +1803,9 @@ design rules under a new name.</description>
 <contactref element="D5" pad="A"/>
 <contactref element="R4" pad="1"/>
 <wire x1="16.256" y1="28.575" x2="16.28" y2="28.575" width="0.3048" layer="1"/>
-<wire x1="16.256" y1="28.575" x2="15.494" y2="28.575" width="0.254" layer="1"/>
-<wire x1="15.494" y1="28.575" x2="14.732" y2="29.337" width="0.254" layer="1"/>
-<wire x1="14.732" y1="29.337" x2="14.058" y2="29.337" width="0.254" layer="1"/>
+<wire x1="16.256" y1="28.575" x2="15.494" y2="28.575" width="0.3048" layer="1"/>
+<wire x1="15.494" y1="28.575" x2="14.732" y2="29.337" width="0.3048" layer="1"/>
+<wire x1="14.732" y1="29.337" x2="14.058" y2="29.337" width="0.3048" layer="1"/>
 <wire x1="14.058" y1="29.337" x2="13.97" y2="29.425" width="0.254" layer="1"/>
 </signal>
 <signal name="RX">
