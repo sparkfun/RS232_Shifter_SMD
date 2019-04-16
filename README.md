@@ -15,6 +15,11 @@ Repository Contents
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/Production** - Production panel files (.brd)
 
+Documentation
+-------------------
+* [Serial Communication](https://learn.sparkfun.com/tutorials/serial-communication) - Basic tutorial on serial communication implemented on logic-level (TTL) and RS-232.
+* [RS-232 vs. TTL Serial Communication](https://www.sparkfun.com/tutorials/215) - Short explanation about the logic levels and the hardware used to convert signals with the RS232 Shifter. 
+
 Product Versions
 ----------------
 * [PRT-08780](https://www.sparkfun.com/products/8780) - Shifter - no DB9 connector
