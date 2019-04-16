@@ -17,8 +17,8 @@ Repository Contents
 
 Product Versions
 ----------------
-* [PRT-08780](https://www.sparkfun.com/products/8780)- Shifter - no DB9 connector
-* [PRT-00449] (https://www.sparkfun.com/products/449)- Shifter with DB9 connector populated.
+* [PRT-08780](https://www.sparkfun.com/products/8780) - Shifter - no DB9 connector
+* [PRT-00449](https://www.sparkfun.com/products/449) - Shifter with DB9 connector populated.
 
 Version History
 ---------------
