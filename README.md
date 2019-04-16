@@ -1,7 +1,7 @@
 SparkFun RS232 Shifter SMD
 ===========================
 
-![RS232 Shifter SMD](https://dlnmh9ip6v2uc.cloudfront.net/images/products/4/4/9/00449-01_medium.jpg)
+[![RS232 Shifter SMD](https://dlnmh9ip6v2uc.cloudfront.net/images/products/4/4/9/00449-01_medium.jpg)](https://www.sparkfun.com/products/449)
 
 [*RS232 Shifter SMD(PRT-00449)*](https://www.sparkfun.com/products/449)
 
